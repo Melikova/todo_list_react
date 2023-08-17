@@ -7,7 +7,7 @@ export const DataProvider = (props) => {
 
     useEffect(()=>{
         const todoStore = JSON.parse(localStorage.getItem('todoStore'));
-        if(todoStore.length){
+        if(todoStore && todoStore.length){
             setTodos(todoStore)
         };
     },[]);
